@@ -1,5 +1,5 @@
 # WS Tunnel
 
-Gambling website using **Node.JS** + **CompoundJS**.
+Proof-of-concept of gambling website using **Node.JS** + **CompoundJS**.
 
-Connections pooling + realtime updates using **Socket.IO**.
+Game clients' connection pooling + realtime updates using **Socket.IO**.
