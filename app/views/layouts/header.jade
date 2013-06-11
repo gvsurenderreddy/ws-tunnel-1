@@ -1,0 +1,49 @@
+- var LANG = request.session.lang || 'ru'
+
+mixin lang-option(name)
+	option(value=name, selected=(LANG == name))!= name
+
+.navbar
+	.navbar-inner
+		.container
+			a.brand(href='/') GPS
+			ul.nav.pull-right
+				li
+					form.lang-selector.navbar-form(action='/settings/lang', method='POST')
+						select(name='language')
+							+lang-option('ru')
+							+lang-option('en')
+				li
+					- var session = ggs.session.get(request), user = typeof(user) !== 'undefined' ? user : (session ? session.lastUser : null)
+					- if (!session) {
+						a= ggs.t('guest', LANG)
+					- } else {
+						a.logged-in(href="#profile", role="button", data-toggle="modal")= session.login
+					- }
+				- if (session) {
+					- if (!user) {
+						script(type='text/javascript')
+							window.location = '/logout'
+					- }
+					- else {
+						li
+							.btn-group
+								a.btn.btn-link.dropdown-toggle(data-toggle='dropdown', href='#')
+									| #{user.cash_real} #{ggs.t('rub', LANG)} | #{user.cash_bonus} #{ggs.t('bonus', LANG)} | #{user.cash_fun} FUN
+									| &nbsp;
+									span.caret
+								ul.dropdown-menu(role='menu')
+									li
+										a(href="#funds", role="button", data-toggle="modal", tabindex='-1') #{ggs.t('payin', LANG)}
+										a(href="#withdraw", role="button", data-toggle="modal", tabindex='-1') #{ggs.t('payout', LANG)}
+										a(href="#payments-history", role="button", data-toggle="modal", tabindex='-1') #{ggs.t('payhistory', LANG)}
+					- }
+					li
+						a(href=path_to.logout)!= ggs.t('logout', LANG)
+				- }
+				- if (!session) {
+					li
+						a(href="#login", role="button", data-toggle="modal")!= ggs.t('login2', LANG)
+					li
+						a(href="#register", role="button", data-toggle="modal")!= ggs.t('register', LANG)
+				- }

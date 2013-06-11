@@ -1,0 +1,22 @@
+!= errorMessagesFor(user)
+- var LANG = request.session.lang || 'ru'
+
+.control-group
+	!= form.label('email', ggs.t('email', LANG), {class: 'control-label'})
+	.controls
+		!= form.input('email')
+
+.control-group
+	!= form.label('login', ggs.t('login', LANG), {class: 'control-label'})
+	.controls
+		!= form.input('login')
+
+.control-group
+	!= form.label('password', ggs.t('password', LANG), {class: 'control-label'})
+	.controls
+		!= form.input('password')
+
+.control-group
+	!= form.label('gender', ggs.t('gender.name', LANG), {class: 'control-label'})
+	.controls
+		!= form.select('gender', [{name: ggs.t('gender.male', LANG), value: 'man'}, {name: ggs.t('gender.female', LANG), value: 'woman'}], {fieldvalue: 'value', fieldname: 'name'})

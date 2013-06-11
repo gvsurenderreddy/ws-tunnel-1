@@ -1,0 +1,29 @@
+- var LANG = request.session.lang || 'ru'
+
+mixin game(data)
+	.span3
+		img(src="/images/games/" + data.icon)
+		p
+			strong!= data.name
+
+		if data.enabled
+			- var add = data.container ? ("&container=" + data.container) : ''
+			p
+				a(href="/play/" + data.id + "?fun=1" + add)!= ggs.t('free', LANG)
+				!= ' | '
+
+				if session
+					a(href="/play/" + data.id + "?fun=0" + add)!= ggs.t('gamble', LANG)
+				else
+					a(href="#register", role="button", data-toggle="modal")!= ggs.t('gamble', LANG)
+
+.content
+	each games, category in gamesList
+		h3= category
+
+		each game, idx in games
+			if (idx % 5) == 0
+				.lobby.row-fluid
+
+					each game in games.slice(idx, idx + 4)
+						+game(game)

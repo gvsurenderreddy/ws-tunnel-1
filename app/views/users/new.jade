@@ -1,0 +1,19 @@
+- var LANG = request.session.lang || 'ru'
+
+.page-header
+	h2!= ggs.t('newUser', LANG)
+
+- var form = formFor(user, {action: pathTo.users(), method: 'POST', id: "user_form", class: 'form-horizontal'})
+
+!= form.begin()
+	- if (typeof(error) !== 'undefined') {
+		.alert.alert-error
+			button(type="button", class="close", data-dismiss="alert") &times;
+			!= error
+	- }
+
+	include _form_new
+
+	.form-actions
+		!= form.submit(ggs.t('register2', LANG), {class: 'btn btn-primary'})
+!= form.end()

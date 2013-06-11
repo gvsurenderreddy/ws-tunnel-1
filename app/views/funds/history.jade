@@ -1,0 +1,17 @@
+- var LANG = request.session.lang || 'ru'
+
+h1 #{ggs.t('payHistory', LANG)}
+
+table.payments-table.table.table-striped
+	thead
+		tr
+			th #{ggs.t('date', LANG)}
+			th #{ggs.t('paysystem', LANG)}
+			th.sum #{ggs.t('amount', LANG)}
+	tbody
+	- payments.forEach(function(payment) {
+		tr
+			td #{payment.date} #{payment.time}
+			td #{payment.system}
+			td.sum #{payment.change > 0 ? '+' : ''}#{payment.change} RUB
+	- })

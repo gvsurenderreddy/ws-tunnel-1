@@ -1,0 +1,32 @@
+- var LANG = request.session.lang || 'ru'
+
+form.form-horizontal.profile(method='post', action=path_to.add_funds)
+	.control-group
+		label.control-label #{ggs.t('paysystem', LANG)}
+		.controls
+			select(name='payment_system')
+				each system in systems
+					option(value=system.code)!= system.name
+
+	.control-group
+		label.control-label #{ggs.t('amount', LANG)}
+		.controls
+			input(type="text", value="50", name="sum")
+
+	.control-group
+		label.control-label #{ggs.t('currency', LANG)}
+		.controls
+			select(name='currency')
+				option(value='RUB') RUB
+				option(value='USD') USD
+				option(value='EUR') EUR
+
+				//each currency in currencies
+					//option(value=currency)= currency
+
+	if userId
+		input(type='hidden', name='user_id', value=userId)
+
+	.control-group
+		.controls
+			input.btn.btn-primary(type='submit', value=ggs.t('addFunds', LANG))

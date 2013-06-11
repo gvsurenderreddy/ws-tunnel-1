@@ -1,0 +1,26 @@
+h1 Профиль игрока
+
+form.form-horizontal.profile(method='post', action=path_to.profile_update)
+	.control-group
+		label.control-label E-mail
+		.controls
+			input(type='text', name='EMail', value=user.EMail)
+
+	.control-group
+		label.control-label Логин
+		.controls
+			input(type='text', name='Login', value=user.Login)
+
+	.control-group
+		label.control-label Ник
+		.controls
+			input(type='text', name='Nick',value=user.Nick)
+
+	.control-group
+		label.control-label Телефон
+		.controls
+			input(type='text', name='phone', value=user.phone)
+
+	.control-group
+		.controls
+			input.btn.btn-primary(type='submit', value='Сохранить')

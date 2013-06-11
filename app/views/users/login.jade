@@ -1,0 +1,20 @@
+- var form = formFor(form, {action: pathTo.login_page(), method: 'POST', id: "user_form", class: 'form-horizontal'})
+- var LANG = request.session.lang || 'ru'
+
+.page-header
+	h1!= ggs.t('auth', LANG)
+
+!= form.begin()
+	- if (error) {
+		.alert.alert-error
+			button(type="button", class="close", data-dismiss="alert") &times;
+			!= error
+	- }
+
+	include _form_login
+
+	- // a(href="#register", role="button", data-toggle="modal") регистрация
+
+	.form-actions
+		!= form.submit(ggs.t('login3', LANG), {class: 'btn btn-primary'})
+!= form.end()

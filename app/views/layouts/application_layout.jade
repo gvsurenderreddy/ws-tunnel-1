@@ -1,0 +1,65 @@
+- var LANG = request.session.lang || 'ru'
+
+!!! 5
+html
+	head
+		title= title
+		!= stylesheet_link_tag('bootstrap', 'bootstrap-responsive')
+		link(type='text/css', rel='stylesheet', href='/stylesheets/application.css?' + Date.now())
+		!= javascript_include_tag('https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js', 'jquery.form', 'rails', 'bootstrap', 'application', 'spin')
+		!= javascript_include_tag('https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js')
+		script(src='/socket.io/socket.io.js', type='text/javascript')
+		script(src='/javascripts/global.js?' + Date.now(), type='text/javascript')
+		script(src='/javascripts/viewer.js?' + Date.now(), type='text/javascript')
+		script(src='/javascripts/history.js/scripts/bundled/html4+html5/jquery.history.js', type='text/javascript')
+		script(src='/javascripts/ws.js?' + Date.now(), type='text/javascript')
+
+		!= csrf_meta_tag()
+	body
+		include header
+
+		.container
+			- var flash = request.flash('info').pop(); if (flash) {
+				.alert.alert-info
+					button(type="button", class="close", data-dismiss="alert") &times;
+					!= flash
+			- }
+
+			- flash = request.flash('error').pop(); if (flash) {
+				.alert.alert-error
+					button(type="button", class="close", data-dismiss="alert") &times;
+					!= flash
+			- }
+
+			!= body
+
+			.modal.hide.fade#login(role="dialog", aria-hidden="true")
+				.modal-header
+						button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+				.modal-body
+
+			.modal.hide.fade#register(role="dialog", aria-hidden="true")
+				.modal-header
+					button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+				.modal-body
+
+			.modal.hide.fade#profile(role="dialog", aria-hidden="true")
+				.modal-header
+					button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+				.modal-body
+
+			.modal.hide.fade#funds(role="dialog", aria-hidden="true")
+				.modal-header
+					button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+				.modal-body
+
+			.modal.hide.fade#withdraw(role="dialog", aria-hidden="true")
+				.modal-header
+					button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+				.modal-body
+
+			.modal.hide.fade#payments-history(role="dialog", aria-hidden="true")
+				.modal-header
+					button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+				.modal-body
+

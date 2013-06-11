@@ -1,0 +1,273 @@
+- 'Иконки Slotozal, есть игры':
+  - 'Book Of Ra'
+  - 'Dolphins Pearl'
+  - 'Bananas Go Bahamas'
+  - 'Unicorn Magic'
+  - 'Lucky Ladys Charm'
+  - 'Marco Polo'
+  -
+    name: 'Attila'
+    id: 'Atilla'
+
+  -
+    name: 'The Ming Dynasty'
+    id: 'DynastyOfMing'
+
+  - 'Polar Fox'
+  - 'Sharky'
+  -
+    name: 'Queen Of Hearts'
+    icon: 'queen-hearts.png'
+
+  -
+    name: 'Pharaohs Gold II'
+    id: 'PharaonsGold'
+    icon: 'pharaohs-gold-2.png'
+
+  - 'The Money Game'
+  - 'Columbus'
+  - 'Banana Splash'
+  - 'Crazy Monkey'
+  - 'Fruit Cocktail'
+  - 'Resident'
+  - 'Garage'
+  - 'Rock Climber'
+  - 'Lucky Haunter'
+  -
+    name: 'Lucky Drink'
+    id: 'LuckyDrinkUrartu'
+
+  - 'Keks'
+
+- 'Иконки GMS, есть игры':
+  -
+    name: 'Ultra Hot Deluxe'
+    id: 'UltraHot_Deluxe'
+
+  - 'Sizzling Hot'
+  -
+   name: 'Aztec Gold'
+   id: 'AztecsGoldUrartu'
+
+  -
+    name: 'Fairy Land'
+    id: 'FairyLandUrartu'
+
+  -
+    name: 'Baccarat'
+    variants:
+      - 'BaccaratUrartu'
+
+  -
+    name: 'Black Jack'
+    variants:
+      - 'BlackjackVUrartu'
+
+  - 'Black Jack Switch'
+  - 'Black Jack Exposure'
+  - 'Black Jack Spain'
+  - 'Caribbean Poker'
+  - 'Joker Poker'
+  - 'Double Joker Poker'
+  -
+    name: 'Keno'
+    variants:
+      - 'KenoUrartu'
+
+  -
+   name: 'Oasis Poker'
+   variants:
+      - 'PokerOasisUrartu'
+
+  - 'Reddog'
+  - 'Three Card Poker'
+  -
+    name: 'Three Card Black Jack'
+    id: 'BlackJackThreecard'
+
+- 'Нет иконок, есть игры':
+  - 'unknown-icon'
+
+  - 'Roulette'
+  - 'Roulette Adviser'
+  - 'Roulette Bull'
+  - 'Roulette Card'
+  - 'Roulette Alpha'
+  - 'Roulette TV'
+  -
+    name: 'Roulette Track'
+    id: 'Roulette_track'
+
+  -
+    name: 'Roulette Track U'
+    id: 'Roulette_trackUrartu'
+
+  -
+    name: 'Roulette USA'
+    id: 'Roulette_usa'
+
+  -
+    name: 'Roulette Zero Less'
+    id: 'Roulette_zero_less'
+
+  - 'Roulette Blankspin'
+
+  - 'Craps Urartu'
+  - 'Fortune Wheel'
+  - 'Craps'
+  - 'Sicbo'
+  - 'Casino War'
+  - 'Poker Russian Urartu'
+
+  - 'Juice N Fruits'
+  - 'Odysseus'
+  - 'Spirit Of Aztec'
+
+  - 'Abandoned Library'
+  - 'Abnormal Zone'
+  - 'Alchemist Lab'
+  - 'Amazon Jungle'
+  - 'Artefact Collector'
+  - 'Atlantida'
+  - 'Bank Robbery'
+  - 'Beijing Duck'
+  - 'Bio Hazard'
+  - 'Camelot'
+  - 'Russian Ivan'
+  - 'Sherlock Holmes'
+  - 'Time Machine'
+  - 'Voodoo Magic'
+
+  - 'Police'
+  - 'Risky Woods'
+  - 'Sexy Chess'
+  - 'Column'
+  - 'Slot Businessman'
+  - 'Slot Dosafe'
+  - 'Slot Pharaon'
+  - 'Slot Wild Honey'
+  - 'Slot Five Lines'
+
+  - 'Slot Excalibur'
+  - 'Slot Big Sam'
+  - 'Slot Space Adventure'
+  - 'Slot Goldrush'
+
+  - 'Crazy Doctor'
+  - 'Tennis Game'
+  - 'Lucky Hunting'
+  - 'Gladiators'
+  - 'Desert Treasure'
+  - 'Egypt Treasures'
+  - 'Formula1'
+  - 'Night Out'
+  - 'Magic War'
+  - 'Dr Lovemore'
+  - 'Lucky Hunting 2'
+  - 'Kavkaz'
+  - 'Cheburashko'
+  - 'Fairytale'
+  - 'Madagascar'
+  - 'Pirate Treasures'
+  - 'Circus'
+  - 'South Park'
+  - 'Sky Way'
+  - 'Sky Way_base'
+  - 'Alice'
+  - 'Alice_base'
+  - 'Pirates Treasures'
+  - 'Pirates Treasures_base'
+  - 'Fruits Of Ra'
+
+  - 'Lucky Reels'
+
+  - 'Slot Vabank'
+  - 'Crazy Doctor 2'
+  - 'Slot Fruit Mania'
+  - 'Slot Happy New Year'
+  - 'Slot Happy New Year2'
+  - 'Slot Kangaroo'
+  - 'Slot Kangaroo Old'
+  - 'Slot Lucky Star'
+  - 'Slot Poker V'
+  - 'Slot Stri pBar'
+  - 'Slot Alchemist'
+  - 'Slot Bling Bling'
+  - 'Slot Bling Bling2'
+  - 'Slot Crazyparty'
+  - 'Slot Crazyparty Old'
+  - 'Slot Crazyparty 2'
+  - 'Slot Treasure Island'
+  - 'Lucky_pirates'
+  - 'Lucky_pirates_base'
+  - 'Slot Dices 2'
+  - 'Slot Golden Road'
+  - 'Slot Wild West'
+  - 'Circus HD'
+  - 'Magic Forest HD'
+  - 'Lucky Reels'
+  - 'Aquatica'
+  - 'Treasures_of_tombs_free'
+  - 'Notre_Dames'
+
+  - 'Sweet Life'
+  - 'Pirate'
+
+  - 'Crazy Fruit Urartu'
+  - 'Golden Glen'
+
+  - 'Slotopol Mega'
+  - 'Slotopol Deluxe Mega'
+
+  - 'Champagne Party Mega'
+
+  - 'Deuces Wild'
+  - 'Deuces Wild Urartu'
+  - 'Jacks Or Better'
+  - 'Jacks Or Better Urartu'
+  - 'Joker Poker'
+  - 'Jacks Or Better Multiline'
+  - 'Deuces Wild Multiline'
+
+  - 'Tens Or Better'
+  - 'Deuces And Joker'
+  - 'Aces And Faces'
+  - 'Sevens Wild'
+  - 'Sevens And JokerWild'
+  - 'Double Joker Poker'
+  - 'Five Joker Poker'
+  - 'Double Triple'
+
+- 'Иконки GMS, нет игр':
+  - 'disabled'
+
+  -
+    name: 'Pharaohs Gold III'
+    icon: 'pharaohs-gold-3.png'
+
+  - 'Ramses II'
+  - 'Magic Princess'
+  - 'Secret Forest'
+  -
+    name: 'The Magic Flute'
+    icon: 'wonderful-flute.png'
+
+  - 'Sparta'
+  - 'Safari Heat'
+  - 'Panther Moon'
+  - 'Mermaids Pearl'
+  - 'King Of Cards'
+  -
+    name: 'Gryphons Gold'
+    icon: 'cryphons-gold.png'
+
+  - 'Golden Planet'
+  - 'Columbus Deluxe'
+  - 'Aztec Treasures'
+  - 'Royal Treasures'
+
+- 'В разработке':
+  - 'unknown-icon'
+  - 'new-container'
+
+  - 'Test'

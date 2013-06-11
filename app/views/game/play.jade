@@ -1,0 +1,28 @@
+.content
+	a.close-game(href="#", title='Закрыть игру') &times;
+
+	.progress.progress-striped.active
+		.bar
+
+	.game
+		if container
+			#div_flash_box
+		else
+			#div_flash_box.do-not-show
+
+	if container
+		script(type='text/javascript')
+			$(function() {
+				config.baseUrl = '#{container}'
+			})
+
+	script(type="text/javascript")
+		$(function() {
+			var gameName = '#{game}';
+
+			reinitV();
+			lastAction('Подготовка к старту игры…');
+			v.start(gameName, 'TEST1000');
+
+			lastAction('Стартуем игру ' + gameName + '…');
+		})

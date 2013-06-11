@@ -1,0 +1,46 @@
+- var LANG = request.session.lang || 'ru'
+- var enableSubmit = false
+
+
+mixin item(system, i)
+	- if ((system.code == selectedSystem && system.currency == selectedCurrency))
+		option(selected='selected', value=system.code, data-max=system.max_sum, data-currency=system.currency) #{system.name} (#{system.currency})
+	- else
+		option(value=system.code, data-max=system.max_sum, data-currency=system.currency) #{system.name} (#{system.currency})
+
+form#withdraw-form.form-horizontal.profile(method='post', action=path_to.withdraw_submit(), data-refresh-url=path_to.withdraw_funds(), data-max=session.lastUser.cash_real, onsubmit='handleWithdrawSubmit()')
+	input(type='hidden', name='currency', value=selectedCurrency)
+
+	.control-group
+		label.control-label #{ggs.t('amount', LANG)}
+		.controls
+			input#withdraw-value(type="text", value=sum, name="sum")
+
+	.control-group
+		label.control-label #{ggs.t('paysystem', LANG)}
+		.controls
+			select#withdraw-system(name='payment_system')
+				option(value='')
+				- methods.forEach(function(system, i) {
+					+item(system, i)
+				- })
+
+	input(type='hidden', name='user_id', value=session.lastUser.id)
+
+	- if (description) {
+		- enableSubmit = true
+
+		.control-group
+			label.control-label #{ggs.t('requisites', LANG)}
+			.controls
+				textarea#withdraw-requisites(name='requisite', data-error-empty=ggs.t('reqEmptyError', LANG))
+
+		#withdraw-desc.control-group
+			label.control-label
+			.controls
+				label= description
+	- }
+
+	.control-group
+		.controls
+			input#withdraw-submit.btn.btn-primary(type='submit', value=enableSubmit ? ggs.t('payout', LANG) : ggs.t('chooseSystem', LANG), disabled=!enableSubmit)

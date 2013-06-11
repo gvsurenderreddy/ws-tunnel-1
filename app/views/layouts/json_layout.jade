@@ -1,0 +1,7 @@
+- var r = {html: body}
+- if (typeof(redirect) !== 'undefined') {
+-   r.redirect = redirect }
+- if (typeof(execute) !== 'undefined') {
+-   r.execute = (typeof(execute) === 'string') ? execute.trim() : execute }
+
+!= JSON.stringify(r)

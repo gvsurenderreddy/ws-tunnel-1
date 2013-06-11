@@ -1,0 +1,12 @@
+!= errorMessagesFor(form)
+- var LANG = request.session.lang || 'ru'
+
+.control-group
+	!= form.label('login', ggs.t('login', LANG), {class: 'control-label'})
+	.controls
+		!= form.input('login')
+
+.control-group
+	!= form.label('password', ggs.t('password', LANG), {class: 'control-label'})
+	.controls
+		!= form.input('password')
